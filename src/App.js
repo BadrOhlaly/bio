@@ -182,7 +182,7 @@ function App() {
     }
   }
   return (
-    <div>
+    <div className='d-flex flex-column min-vh-100'>
       <container className='d-flex align-items-center justify-content-center bg-primary' bg-blue>
         <figure>
           <img className='rounded-circle mt-4 ml-3' alt='Badr Ohlale' src={require('./images/Badr.png')} width={200} height={200}></img>
@@ -196,19 +196,24 @@ function App() {
         <BrowserRouter>
           <Navbar bg="light" variant="dark">
             <Nav className='navbar-nav mx-auto'>
-              <NavItem className='mr-5'>
+              <NavItem className='mr-5 d-flex'>
+                <img src={require('./images/home.png')}></img>
                 <Nav.Link as={Link} to="/" onClick={() => onClic("Acceuil")} className="nav-item active text-decoration-none fs-16 text-primary">Acceuil</Nav.Link>
               </NavItem>
-              <NavItem className='mr-5'>
+              <NavItem className='mr-5 d-flex mx-1'>
+              <img src={require('./images/exp.png')}></img>
                 <Nav.Link as={Link} to="/Experiences" onClick={() => onClic("Experiences")} className='nav-item active text-decoration-none text-primary'>Experiences</Nav.Link>
               </NavItem>
-              <NavItem className='mr-5'>
+              <NavItem className='mr-5 d-flex'>
+              <img src={require('./images/skills.png')}></img>
                 <Nav.Link as={Link} to="/Formations" onClick={() => onClic("Formations")} className='nav-item active text-decoration-none text-primary'>Formations</Nav.Link>
               </NavItem>
-              <NavItem className='mr-5'>
+              <NavItem className='mr-5 d-flex'>
+              <img src={require('./images/project.png')}></img>
                 <Nav.Link as={Link} to="/Projets" onClick={() => onClic("Projets")} className='nav-item active text-decoration-none text-primary'>Projets</Nav.Link>
               </NavItem>
-              <NavItem className='mr-5'>
+              <NavItem className='mr-5 d-flex'>
+              <img src={require('./images/certif.png')}></img>
                 <Nav.Link as={Link} to="/Certifications" onClick={() => onClic("Certifications")} className='nav-item active text-decoration-none text-primary'>Certifications</Nav.Link>
               </NavItem>
             </Nav>
@@ -216,6 +221,20 @@ function App() {
         </BrowserRouter>
       </div>
       {divToShow}
+      <footer className='mt-auto'>
+        <div className='d-flex justify-content-center'>
+          <a href='https://www.facebook.com/badr.ohlale/'>
+           <img src={require('./images/facebook.png')}></img>
+           </a>
+           <a href='https://www.linkedin.com/in/badr-ohlale-57a927216/'>
+           <img src={require('./images/linkedin.png')}></img>
+           </a>
+           <a href='https://github.com/BadrOhlaly/'>
+           <img src={require('./images/github.png')}></img>
+           </a>
+         </div>
+        
+      </footer>
     </div>
   );
 }
